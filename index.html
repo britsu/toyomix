@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Toyomix Auto Center - Pneus, Alinhamento e Suspensão em Araguaína-TO</title>
-    <meta name="description" content="Seu carro em boas mãos na Toyomix Auto Center em Araguaína. Especialistas em pneus, alinhamento, balanceamento, suspensão e troca de óleo. Agende agora pelo WhatsApp!">
-    <meta name="keywords" content="oficina mecânica araguaína, auto center araguaína, pneus araguaína, troca de oleo araguaína, alinhamento e balanceamento">
+    <title>Toyomix Auto Center - Especialistas em Motor, Elétrica e Suspensão em Araguaína-TO</title>
+    <meta name="description" content="Seu carro em boas mãos na Toyomix Auto Center em Araguaína. Especialistas em motor, elétrica, alinhamento, suspensão e troca de óleo. Agende agora pelo WhatsApp!">
+    <meta name="keywords" content="oficina mecânica araguaína, auto center araguaína, conserto de motor araguaína, elétrica automotiva araguaína, alinhamento e balanceamento">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.toyomixaraguaina.com.br"> <!-- Substituir pela URL final -->
 
@@ -23,6 +23,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
+        @property --gradient-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #0E0C0A; /* Cinza Escuro (Quase Preto) */
@@ -37,19 +43,28 @@
              background-position: center;
         }
         .btn-red {
-            background-color: #F30A08; /* Vermelho principal */
+            background-image: linear-gradient(to right, #F30A08 0%, #C20806 80%);
             color: #FFFFFF;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: transform 0.2s ease;
         }
         .btn-red:hover {
-            background-color: #C20806; /* Vermelho mais escuro para hover */
             transform: translateY(-2px);
+        }
+        .btn-red:disabled {
+            background-image: none;
+            background-color: #a12a28;
+            cursor: not-allowed;
         }
         .section-bg {
             background-color: #1a1715; /* Cinza Escuro para seções */
         }
         .card-bg {
             background-color: #0E0C0A;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         .form-input {
             background-color: #1F1F1F;
@@ -74,6 +89,55 @@
         }
         .focus-ring-red:focus {
             --tw-ring-color: #F30A08;
+        }
+        @keyframes gradient-rotate {
+            0% { --gradient-angle: 0deg; }
+            100% { --gradient-angle: 360deg; }
+        }
+        .neon-wrapper {
+            position: relative;
+            z-index: 0;
+            display: inline-block;
+        }
+        .neon-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -3px; left: -3px; right: -3px; bottom: -3px;
+            z-index: -1;
+            background: conic-gradient(
+                from var(--gradient-angle),
+                #F30A08, #C20806, #F30A08
+            );
+            border-radius: 0.75rem; /* Um pouco mais arredondado que o botão */
+            animation: gradient-rotate 4s linear infinite;
+            filter: blur(8px);
+            opacity: 0.8;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        .gemini-result {
+            background-color: #1F1F1F;
+            border-left: 4px solid #F30A08;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            white-space: pre-wrap; /* Mantém a formatação do texto da IA */
+        }
+        .service-icon {
+            width: 3rem; /* 48px */
+            height: 3rem; /* 48px */
+            color: #F30A08;
+            margin-bottom: 1rem;
         }
     </style>
 
@@ -124,9 +188,11 @@
             <div class="text-2xl font-bold text-white">
                 TOYOMIX
             </div>
-            <a href="#agendamento" class="btn-red font-bold py-2 px-4 rounded-lg text-sm md:text-base hidden sm:inline-block">
-                Agendar pelo WhatsApp
-            </a>
+            <div class="neon-wrapper hidden sm:inline-block">
+                <a href="#agendamento" class="btn-red relative font-bold py-2 px-4 rounded-lg text-sm md:text-base">
+                    Agendar pelo WhatsApp
+                </a>
+            </div>
         </div>
     </header>
 
@@ -136,11 +202,31 @@
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Seu carro em <span class="text-red-brand">boas mãos.</span></h1>
                 <p class="mt-4 text-lg md:text-xl text-gray-light max-w-3xl mx-auto">
-                    Pneus, alinhamento, suspensão, troca de óleo e muito mais. Qualidade, confiança e agilidade no atendimento.
+                    Suspensão, freios, alinhamento, motor, elétrica e muito mais. Qualidade, confiança e agilidade no atendimento.
                 </p>
-                <a href="#agendamento" class="btn-red inline-block font-bold text-lg mt-8 py-4 px-8 rounded-lg shadow-xl">
-                    Agendar Agora no WhatsApp
-                </a>
+                <div class="neon-wrapper mt-8">
+                    <a href="#agendamento" class="btn-red relative inline-block font-bold text-lg py-4 px-8 rounded-lg shadow-xl">
+                        Agendar Agora no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Diagnóstico Inteligente com IA -->
+        <section id="diagnostico-ia" class="py-16 md:py-24 bg-[#0E0C0A]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Diagnóstico Inteligente <span class="text-red-brand">✨</span></h2>
+                    <p class="mt-2 text-gray-light">Seu carro está com algum problema? Descreva os sintomas e nossa IA te ajudará com possíveis causas.</p>
+                </div>
+                <div class="max-w-3xl mx-auto mt-8">
+                    <textarea id="sintomas-input" rows="4" class="form-input w-full border rounded-lg p-4 text-white focus:outline-none focus:ring-2 focus-ring-red" placeholder="Ex: Meu carro faz um barulho agudo ao frear e a direção treme em alta velocidade..."></textarea>
+                    <button id="analisar-sintomas-btn" class="w-full btn-red font-bold py-4 px-8 rounded-lg text-lg shadow-xl mt-4">
+                        <span id="analisar-text">Analisar Sintomas</span>
+                        <span id="analisar-spinner" class="spinner hidden"></span>
+                    </button>
+                    <div id="diagnostico-result" class="gemini-result hidden"></div>
+                </div>
             </div>
         </section>
 
@@ -151,44 +237,44 @@
                 <p class="mt-2 text-gray-light">Soluções completas para o seu veículo.</p>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12">
                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Pneus</h3>
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Motor</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Suspensão</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Elétrica</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Freios</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Suspensão</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Alinhamento</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Freios</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Balanceamento</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Alinhamento</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Cambagem</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Balanceamento</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Troca de Óleo</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Troca de Óleo</h3>
                     </div>
-                     <!-- Serviço Card -->
-                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
-                        <span class="text-4xl text-red-brand">✓</span>
-                        <h3 class="mt-4 text-lg font-semibold">Revisão Completa</h3>
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center justify-start h-full">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <h3 class="text-lg font-semibold mt-auto">Revisão Completa</h3>
                     </div>
                 </div>
             </div>
@@ -202,46 +288,12 @@
                     <p class="mt-2 text-gray-light">Entregamos mais do que serviços, entregamos confiança.</p>
                 </div>
                 <div class="max-w-4xl mx-auto mt-12 space-y-8">
-                    <!-- Diferencial Item -->
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
-                        <div>
-                            <h3 class="text-xl font-semibold">Atendimento especializado e ágil</h3>
-                            <p class="text-gray-light mt-1">Nossa equipe está pronta para entender e resolver seu problema com máxima eficiência.</p>
-                        </div>
-                    </div>
-                    <!-- Diferencial Item -->
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
-                        <div>
-                            <h3 class="text-xl font-semibold">Equipe técnica qualificada</h3>
-                            <p class="text-gray-light mt-1">Profissionais experientes e em constante treinamento para cuidar do seu carro.</p>
-                        </div>
-                    </div>
-                    <!-- Diferencial Item -->
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
-                        <div>
-                            <h3 class="text-xl font-semibold">Facilidade de agendamento pelo WhatsApp</h3>
-                            <p class="text-gray-light mt-1">Agende seu serviço em poucos cliques, sem burocracia.</p>
-                        </div>
-                    </div>
-                    <!-- Diferencial Item -->
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
-                        <div>
-                            <h3 class="text-xl font-semibold">Preço justo e serviço garantido</h3>
-                            <p class="text-gray-light mt-1">Transparência total no orçamento e garantia de qualidade em tudo que fazemos.</p>
-                        </div>
-                    </div>
-                    <!-- Diferencial Item -->
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
-                        <div>
-                            <h3 class="text-xl font-semibold">Localização estratégica</h3>
-                            <p class="text-gray-light mt-1">Fácil acesso para você não perder tempo.</p>
-                        </div>
-                    </div>
+                     <!-- Itens diferenciais -->
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-2xl text-red-brand">✔️</div><div><h3 class="text-xl font-semibold">Atendimento especializado e ágil</h3><p class="text-gray-light mt-1">Nossa equipe está pronta para entender e resolver seu problema com máxima eficiência.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-2xl text-red-brand">✔️</div><div><h3 class="text-xl font-semibold">Equipe técnica qualificada</h3><p class="text-gray-light mt-1">Profissionais experientes e em constante treinamento para cuidar do seu carro.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-2xl text-red-brand">✔️</div><div><h3 class="text-xl font-semibold">Facilidade de agendamento pelo WhatsApp</h3><p class="text-gray-light mt-1">Agende seu serviço em poucos cliques, sem burocracia.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-2xl text-red-brand">✔️</div><div><h3 class="text-xl font-semibold">Preço justo e serviço garantido</h3><p class="text-gray-light mt-1">Transparência total no orçamento e garantia de qualidade em tudo que fazemos.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-2xl text-red-brand">✔️</div><div><h3 class="text-xl font-semibold">Localização estratégica</h3><p class="text-gray-light mt-1">Fácil acesso para você não perder tempo.</p></div></div>
                 </div>
             </div>
         </section>
@@ -251,7 +303,7 @@
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Agende seu Horário</h2>
-                    <p class="mt-2 text-gray-light">Preencha os campos abaixo para agilizar seu atendimento no WhatsApp.</p>
+                    <p class="mt-2 text-gray-light">Preencha os campos para agilizar seu atendimento no WhatsApp.</p>
                 </div>
                 <form id="whatsapp-form" class="max-w-2xl mx-auto mt-12 space-y-6">
                     <div>
@@ -266,7 +318,8 @@
                         <label for="servico" class="block text-sm font-medium text-gray-light mb-2">Serviço Desejado</label>
                         <select id="servico" name="servico" required class="form-input w-full border rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-red">
                             <option value="Avaliação">Quero uma avaliação</option>
-                            <option value="Troca de Pneus">Troca de Pneus</option>
+                            <option value="Motor">Motor</option>
+                            <option value="Elétrica">Elétrica</option>
                             <option value="Alinhamento e Balanceamento">Alinhamento e Balanceamento</option>
                             <option value="Suspensão">Suspensão</option>
                             <option value="Freios">Freios</option>
@@ -282,9 +335,11 @@
                             <option value="Qualquer horário">Qualquer horário</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full btn-red font-bold py-4 px-8 rounded-lg text-lg shadow-xl">
-                        Solicitar Atendimento no WhatsApp
-                    </button>
+                    <div class="neon-wrapper w-full">
+                        <button type="submit" id="agendar-btn" class="w-full btn-red relative font-bold py-4 px-8 rounded-lg text-lg shadow-xl">
+                            Solicitar Atendimento no WhatsApp
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -305,7 +360,8 @@
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                <a href="https://maps.app.goo.gl/95u3yE8Jq2G7gKqE9" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block btn-gray font-bold py-3 px-6 rounded-lg">
+                <!-- ATENÇÃO: O link abaixo foi fornecido pelo usuário. Verifique se ele está correto. -->
+                <a href="https://maps.app.goo.gl/E659RgrQ2i4qTAJ39" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block btn-gray font-bold py-3 px-6 rounded-lg">
                     Abrir no Google Maps
                 </a>
             </div>
@@ -327,22 +383,76 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const phoneNumber = '5563992972600';
+            
+            // Diagnóstico Inteligente
+            const analisarBtn = document.getElementById('analisar-sintomas-btn');
+            const sintomasInput = document.getElementById('sintomas-input');
+            const diagnosticoResult = document.getElementById('diagnostico-result');
+            const analisarText = document.getElementById('analisar-text');
+            const analisarSpinner = document.getElementById('analisar-spinner');
+
+            analisarBtn.addEventListener('click', async () => {
+                const sintomas = sintomasInput.value;
+                if (!sintomas.trim()) {
+                    diagnosticoResult.textContent = 'Por favor, descreva os sintomas do seu veículo.';
+                    diagnosticoResult.classList.remove('hidden');
+                    return;
+                }
+
+                analisarText.classList.add('hidden');
+                analisarSpinner.classList.remove('hidden');
+                analisarBtn.disabled = true;
+
+                const geminiApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=`;
+                const prompt = `Você é um especialista em mecânica de automóveis. Um cliente descreveu o seguinte problema com seu carro: "${sintomas}". Com base nisso, liste 3 possíveis causas em formato de tópicos, explicando cada uma de forma muito simples para um leigo. Importante: no final, adicione a seguinte frase exatamente como está e em uma nova linha: "**Atenção: Este é um diagnóstico preliminar. Para uma avaliação precisa e segura, agende uma visita com nossos especialistas na Toyomix.**" Não dê certeza de nada, apenas levante hipóteses.`;
+
+                try {
+                    const payload = { contents: [{ parts: [{ text: prompt }] }] };
+                    const response = await fetch(geminiApiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                       throw new Error(`API Error: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates[0].content.parts[0].text) {
+                        diagnosticoResult.innerHTML = result.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    } else {
+                        throw new Error("Resposta da API inválida.");
+                    }
+                    
+                } catch (error) {
+                    console.error("Erro na API Gemini:", error);
+                    diagnosticoResult.textContent = "Desculpe, não foi possível realizar o diagnóstico no momento. Por favor, tente novamente mais tarde ou entre em contato diretamente conosco.";
+                } finally {
+                    diagnosticoResult.classList.remove('hidden');
+                    analisarText.classList.remove('hidden');
+                    analisarSpinner.classList.add('hidden');
+                    analisarBtn.disabled = false;
+                }
+            });
+
+            // Formulário de Agendamento
             const form = document.getElementById('whatsapp-form');
+
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                // Contato correto da Toyomix com código do país e DDD
-                const phoneNumber = '5563992972600'; 
-                
                 const nome = document.getElementById('nome').value;
                 const veiculo = document.getElementById('veiculo').value;
                 const servico = document.getElementById('servico').value;
                 const horario = document.getElementById('horario').value;
-
-                const message = `Olá, meu nome é ${nome}, possuo um ${veiculo}. Gostaria de agendar um(a) ${servico} para o horário da ${horario}.`;
+                
+                // Monta a mensagem com os dados em negrito (usando asteriscos)
+                const message = `Olá, meu nome é *${nome}*, possuo um *${veiculo}*. Gostaria de agendar um(a) *${servico}* para o horário da *${horario}*.`;
                 
                 const encodedMessage = encodeURIComponent(message);
-                
                 const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
                 
                 window.open(whatsappUrl, '_blank');

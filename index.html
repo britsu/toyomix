@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Toyomix Auto Center - Pneus, Alinhamento e Suspensão em Araguaína-TO</title>
+    <meta name="description" content="Seu carro em boas mãos na Toyomix Auto Center em Araguaína. Especialistas em pneus, alinhamento, balanceamento, suspensão e troca de óleo. Agende agora pelo WhatsApp!">
+    <meta name="keywords" content="oficina mecânica araguaína, auto center araguaína, pneus araguaína, troca de oleo araguaína, alinhamento e balanceamento">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.toyomixaraguaina.com.br"> <!-- Substituir pela URL final -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/F30A08/ffffff?text=T" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0E0C0A; /* Cinza Escuro (Quase Preto) */
+            color: #FFFFFF; /* Branco */
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+             background-image: linear-gradient(rgba(14, 12, 10, 0.85), rgba(14, 12, 10, 1)), url('https://placehold.co/1920x1080/1a1a1a/cccccc?text=Foto+da+Fachada+Toyomix');
+             background-size: cover;
+             background-position: center;
+        }
+        .btn-red {
+            background-color: #F30A08; /* Vermelho principal */
+            color: #FFFFFF;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-red:hover {
+            background-color: #C20806; /* Vermelho mais escuro para hover */
+            transform: translateY(-2px);
+        }
+        .section-bg {
+            background-color: #1a1715; /* Cinza Escuro para seções */
+        }
+        .card-bg {
+            background-color: #0E0C0A;
+        }
+        .form-input {
+            background-color: #1F1F1F;
+            border-color: #383838;
+        }
+        .btn-gray {
+            background-color: #2d2d2d;
+            color: #FFFFFF;
+            transition: background-color 0.3s ease;
+        }
+        .btn-gray:hover {
+            background-color: #3d3d3d;
+        }
+        .footer-bg {
+            background-color: #000000;
+        }
+        .text-gray-light {
+            color: #D1D5DB;
+        }
+        .text-red-brand {
+            color: #F30A08; /* Vermelho principal */
+        }
+        .focus-ring-red:focus {
+            --tw-ring-color: #F30A08;
+        }
+    </style>
+
+    <!-- Schema.org for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Toyomix Auto Center",
+      "image": "https://www.toyomixaraguaina.com.br/logo.png",
+      "@id": "https://www.toyomixaraguaina.com.br",
+      "url": "https://www.toyomixaraguaina.com.br",
+      "telephone": "+5563992972600",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Santos Dumont, 1532",
+        "addressLocality": "Araguaína",
+        "addressRegion": "TO",
+        "postalCode": "77808-010",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.189530, 
+        "longitude": -48.204550
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      } 
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="bg-[#0E0C0A]/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                TOYOMIX
+            </div>
+            <a href="#agendamento" class="btn-red font-bold py-2 px-4 rounded-lg text-sm md:text-base hidden sm:inline-block">
+                Agendar pelo WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Principal (Hero) -->
+        <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Seu carro em <span class="text-red-brand">boas mãos.</span></h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-light max-w-3xl mx-auto">
+                    Pneus, alinhamento, suspensão, troca de óleo e muito mais. Qualidade, confiança e agilidade no atendimento.
+                </p>
+                <a href="#agendamento" class="btn-red inline-block font-bold text-lg mt-8 py-4 px-8 rounded-lg shadow-xl">
+                    Agendar Agora no WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="py-16 md:py-24 section-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Nossos Serviços</h2>
+                <p class="mt-2 text-gray-light">Soluções completas para o seu veículo.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12">
+                    <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Pneus</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Suspensão</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Freios</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Alinhamento</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Balanceamento</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Cambagem</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Troca de Óleo</h3>
+                    </div>
+                     <!-- Serviço Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <span class="text-4xl text-red-brand">✓</span>
+                        <h3 class="mt-4 text-lg font-semibold">Revisão Completa</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Diferenciais -->
+        <section id="diferenciais" class="py-16 md:py-24 bg-[#0E0C0A]">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Por que escolher a Toyomix?</h2>
+                    <p class="mt-2 text-gray-light">Entregamos mais do que serviços, entregamos confiança.</p>
+                </div>
+                <div class="max-w-4xl mx-auto mt-12 space-y-8">
+                    <!-- Diferencial Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Atendimento especializado e ágil</h3>
+                            <p class="text-gray-light mt-1">Nossa equipe está pronta para entender e resolver seu problema com máxima eficiência.</p>
+                        </div>
+                    </div>
+                    <!-- Diferencial Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Equipe técnica qualificada</h3>
+                            <p class="text-gray-light mt-1">Profissionais experientes e em constante treinamento para cuidar do seu carro.</p>
+                        </div>
+                    </div>
+                    <!-- Diferencial Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Facilidade de agendamento pelo WhatsApp</h3>
+                            <p class="text-gray-light mt-1">Agende seu serviço em poucos cliques, sem burocracia.</p>
+                        </div>
+                    </div>
+                    <!-- Diferencial Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Preço justo e serviço garantido</h3>
+                            <p class="text-gray-light mt-1">Transparência total no orçamento e garantia de qualidade em tudo que fazemos.</p>
+                        </div>
+                    </div>
+                    <!-- Diferencial Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-2xl text-red-brand">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Localização estratégica</h3>
+                            <p class="text-gray-light mt-1">Fácil acesso para você não perder tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário Inteligente -->
+        <section id="agendamento" class="py-16 md:py-24 section-bg">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Agende seu Horário</h2>
+                    <p class="mt-2 text-gray-light">Preencha os campos abaixo para agilizar seu atendimento no WhatsApp.</p>
+                </div>
+                <form id="whatsapp-form" class="max-w-2xl mx-auto mt-12 space-y-6">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-light mb-2">Seu Nome</label>
+                        <input type="text" id="nome" name="nome" required class="form-input w-full border rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-red">
+                    </div>
+                    <div>
+                        <label for="veiculo" class="block text-sm font-medium text-gray-light mb-2">Seu Veículo (Ex: Corolla 2022)</label>
+                        <input type="text" id="veiculo" name="veiculo" required class="form-input w-full border rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-red">
+                    </div>
+                    <div>
+                        <label for="servico" class="block text-sm font-medium text-gray-light mb-2">Serviço Desejado</label>
+                        <select id="servico" name="servico" required class="form-input w-full border rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-red">
+                            <option value="Avaliação">Quero uma avaliação</option>
+                            <option value="Troca de Pneus">Troca de Pneus</option>
+                            <option value="Alinhamento e Balanceamento">Alinhamento e Balanceamento</option>
+                            <option value="Suspensão">Suspensão</option>
+                            <option value="Freios">Freios</option>
+                            <option value="Troca de Óleo">Troca de Óleo</option>
+                            <option value="Revisão Completa">Revisão Completa</option>
+                        </select>
+                    </div>
+                     <div>
+                        <label for="horario" class="block text-sm font-medium text-gray-light mb-2">Melhor Horário para Contato</label>
+                        <select id="horario" name="horario" required class="form-input w-full border rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-red">
+                            <option value="Manhã (8h-12h)">Manhã (8h-12h)</option>
+                            <option value="Tarde (14h-18h)">Tarde (14h-18h)</option>
+                            <option value="Qualquer horário">Qualquer horário</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full btn-red font-bold py-4 px-8 rounded-lg text-lg shadow-xl">
+                        Solicitar Atendimento no WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section id="localizacao" class="py-16 md:py-24 bg-[#0E0C0A]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Nossa Localização</h2>
+                <p class="mt-2 text-gray-light">Av. Santos Dumont, 1532 – Setor Rodoviário, Araguaína – TO</p>
+                <div class="mt-8 rounded-lg overflow-hidden shadow-2xl border-4 border-[#1a1715]">
+                     <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.67131804153!2d-48.20713028522986!3d-7.18952499452033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d9f1e1a5f6e8c7%3A0x6d9f7a7f45c9f952!2sAv.%20Santos%20Dumont%2C%201532%20-%20St.%20Rodoviario%2C%20Aragua%C3%ADna%20-%20TO%2C%2077808-010!5e1!3m2!1spt-BR!2sbr!4v1684942940651!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/95u3yE8Jq2G7gKqE9" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block btn-gray font-bold py-3 px-6 rounded-lg">
+                    Abrir no Google Maps
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer-bg py-8">
+        <div class="container mx-auto px-6 text-center text-gray-light">
+            <p class="font-bold text-lg text-white">TOYOMIX AUTO CENTER</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#agendamento" class="hover:text-white transition-colors">WhatsApp</a>
+                <a href="https://www.instagram.com/toyomixaraguaina" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#localizacao" class="hover:text-white transition-colors">Localização</a>
+            </div>
+            <p class="mt-6 text-sm">&copy; 2024 Toyomix Auto Center. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('whatsapp-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Contato correto da Toyomix com código do país e DDD
+                const phoneNumber = '5563992972600'; 
+                
+                const nome = document.getElementById('nome').value;
+                const veiculo = document.getElementById('veiculo').value;
+                const servico = document.getElementById('servico').value;
+                const horario = document.getElementById('horario').value;
+
+                const message = `Olá, meu nome é ${nome}, possuo um ${veiculo}. Gostaria de agendar um(a) ${servico} para o horário da ${horario}.`;
+                
+                const encodedMessage = encodeURIComponent(message);
+                
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+                
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
